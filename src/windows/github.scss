@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: calc(300px - 40px);
-    overflow-y: auto;
-
+    flex: 1;
+    min-height: 0;
+overflow-y: auto;
     &::-webkit-scrollbar {
         width: 6px;
     }
@@ -31,6 +31,7 @@
     padding: 0.75rem;
     transition: all 0.3s ease;
     cursor: pointer;
+
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.08);
@@ -133,13 +134,13 @@
     background-color: rgb(69, 67, 67);
     border-radius: 0.75rem;
     padding: 2rem;
-    max-width: 500px;
-    width: 90%;
-    max-height: 80vh;
+
     overflow-y: auto;
     position: relative;
     animation: slideIn 0.3s ease;
-    border: 1px solid rgba(216, 208, 208, 0.2);
+        margin-bottom: 1rem;
+    gap: 1rem;
+    // border: 1px solid rgba(216, 208, 208, 0.2);
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -181,146 +182,55 @@
         margin-bottom: 1.5rem;
         margin-top: 0;
     }
-        margin-bottom: 1rem;
-        gap: 1rem;
 
-        .modal-title {
-            margin: 0;
+
+    .modal-title {
+        margin: 0;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        word-break: break-word;
+    }
+
+    .modal-badge {
+        background-color: rgba(216, 208, 208, 0.2);
+        color: rgba(216, 208, 208, 0.8);
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.25rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+}
+
+.modal-description {
+    color: rgba(216, 208, 208, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    
+
+  &:hover {
+                background-color: #0860ca;
+            }
+        
+          
+
+        &.btn-secondary {
+            background-color: rgba(216, 208, 208, 0.1);
             color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            word-break: break-word;
-        }
+            border: 1px solid rgba(216, 208, 208, 0.3);
 
-        .modal-badge {
-            background-color: rgba(216, 208, 208, 0.2);
-            color: rgba(216, 208, 208, 0.8);
-            padding: 0.3rem 0.7rem;
-            border-radius: 0.25rem;
-            font-size: 0.8rem;
-            white-space: nowrap;
-        }
-    }
-
-    .modal-description {
-        color: rgba(216, 208, 208, 0.9);
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
-        margin-top: 0;
-    }
-
-    .modal-info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-
-        .info-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-
-            .info-label {
-                font-size: 0.75rem;
-                color: rgba(216, 208, 208, 0.6);
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                font-weight: 600;
-            }
-
-            .info-value {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                font-size: 0.9rem;
-                color: #ffffff;
-                font-weight: 500;
-
-                .language-dot-large {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                }
+            &:hover {
+                background-color: rgba(216, 208, 208, 0.15);
+                border-color: rgba(216, 208, 208, 0.5);
             }
         }
+    
+
     }
-
-    .modal-tags {
-        margin-bottom: 1.5rem;
-
-        .tags-label {
-            font-size: 0.75rem;
-            color: rgba(216, 208, 208, 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .tags-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-
-            .tag {
-                background-color: rgba(255, 255, 255, 0.1);
-                color: rgba(216, 208, 208, 0.9);
-                padding: 0.4rem 0.8rem;
-                border-radius: 0.25rem;
-                font-size: 0.8rem;
-                border: 1px solid rgba(216, 208, 208, 0.2);
-            }
-        }
-    }
-
-    .modal-buttons {
-        display: flex;
-        gap: 0.75rem;
-        flex-direction: column;
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-
-            &.btn-primary {
-                background-color: #0969da;
-                color: #ffffff;
-
-                &:hover {
-                    background-color: #0860ca;
-                }
-            }
-
-            &.btn-secondary {
-                background-color: rgba(216, 208, 208, 0.1);
-                color: #ffffff;
-                border: 1px solid rgba(216, 208, 208, 0.3);
-
-                &:hover {
-                    background-color: rgba(216, 208, 208, 0.15);
-                    border-color: rgba(216, 208, 208, 0.5);
-                }
-            }
-        }
-    }
-
-
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+ 
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
@@ -364,14 +274,13 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 
     .modal-titlebar {
-        padding: 0.75rem;
-        background-color: rgb(60, 58, 58);
-        border-bottom: 1px solid rgba(216, 208, 208, 0.2);
+        padding-inline: 0.75rem;
+        padding-block: 0.5rem;
         display: flex;
+        gap: 0.75rem;
         align-items: center;
-        gap: 1rem;
-        min-height: 38px;
-
+        border-bottom: 1px solid rgba(216, 208, 208, 0.2) ;
+    
         .window-controls {
             display: flex;
             gap: 0.6rem;
@@ -412,11 +321,10 @@
         }
 
         .titlebar-title {
-            margin: 0;
-            font-size: 0.95rem;
-            color: rgba(216, 208, 208, 0.9);
-            font-weight: 600;
-            text-align: center;
+
+            font-size: 0.85rem;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 700;
             flex: 1;
             white-space: nowrap;
             overflow: hidden;

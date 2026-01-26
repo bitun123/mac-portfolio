@@ -195,9 +195,15 @@ function Github() {
                             return <GitCard key={project.id} data={project} onClick={() => setSelectedRepo(project)} />
                         })
                     }
+                   
                 </div>
             </MacWindow>
-            {selectedRepo && <RepoModal data={selectedRepo} onClose={() => setSelectedRepo(null)} />}
+             {selectedRepo && <RepoModal data={selectedRepo} onClose={() => setSelectedRepo(null)} />}
+          
+
+
+                  
+       
         </>
     );
 }
