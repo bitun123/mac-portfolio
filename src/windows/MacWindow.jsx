@@ -18,9 +18,7 @@ function MacWindow({children}) {
                 <div className="dot yellow"></div>
                 <div className="dot green"></div>
             </div>
-<div className="title"><p>satyajit -zsh</p></div>
-
-
+            <div className="title"><p>satyajit -zsh</p></div>
         </div>
         <div className="main-content">
             {children}

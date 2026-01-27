@@ -1,4 +1,5 @@
 .window {
+
     height: 100%;
     background-color: rgb(69, 67, 67);
     border-radius: 0.75rem;
@@ -7,6 +8,7 @@
     flex-direction: column;
     font-weight: 500;
     position: relative;
+
     
     .nav {
         padding-inline: 0.75rem;
@@ -39,9 +41,16 @@
         }
     }
 
-    .main-content {
-        flex: 1;
-        display: flex;
-        overflow: hidden;
-    }
+.main-content{
+    padding: 1rem;
+    overflow-y: scroll;
+
+
+       &::-webkit-scrollbar {
+            width: 0;
+        }
+
+
+
+}
 }
