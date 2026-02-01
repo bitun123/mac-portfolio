@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import MacWindow from "./MacWindow";
-import github from "../assets/github.json";
+import MacWindow from "../MacWindow";
+import github from "../../assets/github.json";
 import "./github.scss";
-import RepoModels from "./RepoModels";
+
 import { motion } from "framer-motion";
+import RepoModels from "./repo/RepoModels";
 
 const GitCard = ({
   data = {
@@ -224,7 +225,7 @@ function Github() {
         </div>
       </MacWindow>
       {selectedRepo && (
-        <RepoModels data={selectedRepo} onClose={() => setSelectedRepo(null)} />
+   <RepoModels data={selectedRepo} onClose={() => setSelectedRepo(null)}/>
       )}
     </>
   );

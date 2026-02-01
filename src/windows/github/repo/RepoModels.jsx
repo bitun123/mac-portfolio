@@ -1,7 +1,9 @@
 import React from "react";
 
 import "./repoModels.scss";
-import MacWindow from "./MacWindow";
+import MacWindow from "../../MacWindow";
+
+
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   const now = new Date();
@@ -142,9 +144,9 @@ const RepoModal = ({ data, onClose }) => {
 
 function RepoModels({ data, onClose }) {
   return (
-    <MacWindow>
-      <RepoModal data={data} onClose={onClose} />
-    </MacWindow>
+<MacWindow>
+    <RepoModal data={data} onClose={onClose} />
+</MacWindow>
   );
 }
 

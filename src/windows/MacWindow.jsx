@@ -1,6 +1,6 @@
 import React from "react";
 import { Rnd } from "react-rnd";
-import "./window.scss"
+import "./MacWindow.scss"
 function MacWindow({children}) {
   return (
     <Rnd 

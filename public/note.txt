@@ -1,0 +1,114 @@
+/**
+ * @file        profile.config.ts
+ * @author      Personal Portfolio
+ * @summary     Junior Developer 
+ * @Learning     Learning Full-Stack (MERN)
+ * @status      Active Learner
+ */
+
+// ==================================================
+"1. TECH STACK"
+// ==================================================
+
+const TECH_STACK = {
+  frontend: {
+    HTML:        "//90%"
+    SCSS:        "//90%"
+    JavaScript:  "//90%",
+    React.js:    "75%",
+    TailwindCSS: "70%",
+  },
+
+  backend: {
+    "Node.js":    "learning",
+    "Express.js": "beginner",
+  },
+
+  tools: [
+    "Git",
+    "Postman",
+    "MongoDB Compass",
+    "VS Code",
+  ],
+};
+
+// ===========================================
+"2. JOURNEY LOG"
+// ===========================================
+
+class DeveloperJourney {
+
+  /**
+   * CURRENT PHASE
+   * @since 2023
+   */
+  current() {
+    return {
+      title: "Learning Full-Stack Development",
+      focus: "Backend fundamentals & API development",
+      learning: [
+        "Building REST APIs using Node.js & Express.js",
+        "Practicing CRUD operations with MongoDB",
+        "Connecting React frontend with backend services",
+        "Improving JavaScript & async concepts",
+      ],
+    };
+  }
+
+  /**
+   * PREVIOUS PHASE
+   * @until 2023
+   */
+  previous() {
+    return {
+      title: "Frontend Development Practice",
+      learning: [
+        "Created responsive layouts using HTML & SCSS",
+        "Built interactive UI with JavaScript",
+        "Learned React fundamentals &
+         component structure",
+        "Focused on clean UI and consistency",
+      ],
+    };
+  }
+}
+
+// ==================================================
+" 3. PRACTICE PROJECTS"
+// ==================================================
+
+interface Project {
+  name: string;
+  purpose: string;
+  stack: string[];
+}
+
+const PROJECTS: Project[] = [
+  {
+    name: "Simple REST API",
+    purpose: "Practice backend fundamentals &
+     API structure",
+    stack: ["Node.js", "Express.js", "MongoDB"],
+  },
+];
+
+// ==================================================
+" 4. PROFILE META"
+// ==================================================
+
+const PROFILE_META = {
+  availability: "Open to Internships / Junior Roles",
+  focus: "Learning & Building",
+  mode: "Consistent Improvement",
+};
+
+// ==================================================
+" 5. EXPORT"
+// ==================================================
+
+export default {
+  techStack: TECH_STACK,
+  journey: new DeveloperJourney(),
+  projects: PROJECTS,
+  meta: PROFILE_META,
+};
