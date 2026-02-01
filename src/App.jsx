@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 // import MacWindow from './windows/MacWindow'
 import Github from './windows/github/Github'
 import Note from './windows/note/Note'
+import Resume from './windows/resume/Resume'
 
 // import RepoModels from './windows/RepoModels'
 function App() {
@@ -14,6 +15,7 @@ function App() {
   <Dock/>
 <Github/>
 <Note/>
+<Resume/>
   {/* <RepoModels/> */}
 </main>
   )
