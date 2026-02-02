@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import Github from './windows/github/Github'
 import Note from './windows/note/Note'
 import Resume from './windows/resume/Resume'
+import Spotify from './windows/spotify/Spotify'
 
 // import RepoModels from './windows/RepoModels'
 function App() {
@@ -16,6 +17,7 @@ function App() {
 <Github/>
 <Note/>
 <Resume/>
+<Spotify/>
   {/* <RepoModels/> */}
 </main>
   )
