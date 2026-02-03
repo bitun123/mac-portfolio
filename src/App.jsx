@@ -7,6 +7,8 @@ import Github from './windows/github/Github'
 import Note from './windows/note/Note'
 import Resume from './windows/resume/Resume'
 import Spotify from './windows/spotify/Spotify'
+import Terminal from 'react-console-emulator'
+import Cli from './windows/terminal/Cli'
 
 // import RepoModels from './windows/RepoModels'
 function App() {
@@ -18,6 +20,7 @@ function App() {
 <Note/>
 <Resume/>
 <Spotify/>
+<Cli/>
   {/* <RepoModels/> */}
 </main>
   )
