@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import Dock from "./components/Dock";
 import Nav from "./components/Nav";
@@ -11,20 +11,19 @@ import Cli from "./windows/terminal/Cli";
 import FloatingLines from "./FloatingLines";
 
 function App() {
+  const [windowsState, setwindowsState] = useState({
+    github: false,
+    note: false,
+    resume: false,
+    spotify: false,
+    cli: false,
+  });
   return (
-    <div style={{ position: "relative", width: "100%", height: "100%" }}>
-      <main style={{ position: "relative", zIndex: 1 }}>
+    <div className="hero">
+      <main>
         {" "}
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: 0,
-          }}
-        >
+                <Nav  setWindowsState={setwindowsState}  />
+        <div className="floatingLine">
           <FloatingLines
             enabledWaves={["top", "middle", "bottom"]}
             lineCount={5}
@@ -35,13 +34,50 @@ function App() {
             parallax={true}
           />
         </div>
-        <Nav />
-        <Dock />
-        <Github />
-        <Note />
-        <Resume />
-        <Spotify />
-        <Cli />
+
+        <Dock windowsState={windowsState} setWindowsState={setwindowsState} />
+        {windowsState.github && (
+          <Github
+            windowName="github"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
+        {windowsState.note && (
+          <Note
+            windowName="note"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
+        {windowsState.resume && (
+          <Resume
+            windowName="resume"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
+        {windowsState.spotify && (
+          <Spotify
+            windowName="spotify"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
+        {windowsState.cli && (
+          <Cli
+            windowName="cli"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
+        {windowsState.repo && (
+          <RepoModels
+            windowName="repo"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
       </main>
     </div>
   );

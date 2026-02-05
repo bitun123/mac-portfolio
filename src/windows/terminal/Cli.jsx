@@ -4,7 +4,7 @@ import Terminal from "react-console-emulator";
 import "./cli.scss";
 import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 import { color } from "framer-motion";
-function Cli() {
+function Cli({ windowName, windowsState, setWindowsState }) {
   const commands = {
     details: {
       description: "List all available commands.",
@@ -168,7 +168,7 @@ Happy exploring! 🚀
 `;
 
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} windowsState={windowsState} setWindowsState={setWindowsState} >
       <div className="cli-window">
         <Terminal
           commands={commands}

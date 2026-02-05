@@ -12,15 +12,15 @@
     backdrop-filter: blur(5px);
     z-index: 99;
     .icon {
-        padding: 0.6rem;
         border-radius: 0.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
         aspect-ratio: 1/1;
         cursor: pointer;
-        width: 3.7rem;
+        width: 4rem;
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        position: relative;
     } 
     .github,
     .cli {
@@ -40,7 +40,8 @@
         background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
     }
     .link {
-        background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 150));
+        background: linear-gradient(to bottom, rgb(10, 102, 194), rgb(10, 102, 194));
+        padding: 0rem 2rem;
     }
 
     .icon:hover {
@@ -50,5 +51,24 @@
     .icon:hover + .icon,
     .icon:has(+ .icon:hover) {
         transform: scale(1.1) translateY(-10%);
+    }
+
+    .active-dot {
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0.4rem;
+        height: 0.4rem;
+       
+        background-color: #42d7426d;
+        border-radius: 50%;
+        z-index: 100;
+        opacity: 0;
+        transition: opacity 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+
+    .active-dot.active {
+        opacity: 1;
     }
 }

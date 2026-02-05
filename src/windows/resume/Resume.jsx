@@ -1,9 +1,9 @@
 import React from "react";
 import MacWindow from "../MacWindow";
 import "./resume.scss"
-function Resume() {
+function Resume({ windowName, windowsState, setWindowsState }) {
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} windowsState={windowsState} setWindowsState={setWindowsState} >
       <div className="resume_window">
 
       {/* Hide PDF viewer toolbar via URL fragment (works with some viewers) */}

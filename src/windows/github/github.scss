@@ -1,15 +1,13 @@
 .git-card {
     border: 2px solid rgba(255, 255, 255, 0.08);
 
-background-color: #544f4f;
+    background-color: #544f4f;
     border-radius: 0.5rem;
     padding: 0.75rem;
     transition: all 0.3s ease;
     cursor: pointer;
     margin-bottom: 1rem;
-    --accent-color: #858585; // default
-
-
+    --accent-color: #858585;
     &:hover {
         background-color: var(--accent-color);
 
@@ -18,9 +16,9 @@ background-color: #544f4f;
             circle at 50% 60%,
             color-mix(in srgb, var(--accent-color) 40%, transparent),
             transparent 60%
-        ) 
-        ;
+        );
     }
+
     .card-header {
         display: flex;
         justify-content: space-between;

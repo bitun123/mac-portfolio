@@ -1,7 +1,7 @@
 import React from "react";
 import "./nav.scss";
 import DateTime from "./DateTime";
-function Nav() {
+function Nav({ windowsState, setWindowsState }) {
   return (
     <nav>
       <div className="left">
@@ -13,22 +13,33 @@ function Nav() {
           <p>satyajit das mahapatra</p>
         </div>
         <div className="nav-item">
-          <p>File</p>
+          <p 
+              onClick={() => {
+          setWindowsState((state) => ({ ...state, resume: true }));
+        }}
+          >File</p>
         </div>
         <div className="nav-item">
           <p>Window</p>
         </div>
         <div className="nav-item">
-          <p>Terminal</p>
+          <p
+            onClick={() => {
+              setWindowsState((state) => ({ ...state, cli: true }));
+            }}
+          >
+            Terminal
+          </p>
+          
         </div>
       </div>
       <div className="right">
         <div className="nav-icon">
           <img src="/navbar-icons/wifi.svg" alt="" />
         </div>
-            <div className="nav-item">
-            <DateTime />
-          </div>
+        <div className="nav-item">
+          <DateTime />
+        </div>
       </div>
     </nav>
   );
