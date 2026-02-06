@@ -8,6 +8,7 @@ function Linkdin({ windowName, windowsState, setWindowsState }) {
       windowName={windowName}
       windowsState={windowsState}
       setWindowsState={setWindowsState}
+         width="50vw"
     >
       <div className="home">
         <div className="navbar">
@@ -48,6 +49,8 @@ function Linkdin({ windowName, windowsState, setWindowsState }) {
             </div>
           </div>
         </div>
+
+        
       </div>
     </MacWindow>
   );
