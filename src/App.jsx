@@ -9,6 +9,7 @@ import Resume from "./windows/resume/Resume";
 import Spotify from "./windows/spotify/Spotify";
 import Cli from "./windows/terminal/Cli";
 import FloatingLines from "./FloatingLines";
+import Linkdin from "./windows/linkdin/Linkdin";
 
 function App() {
   const [windowsState, setwindowsState] = useState({
@@ -22,7 +23,7 @@ function App() {
     <div className="hero">
       <main>
         {" "}
-                <Nav  setWindowsState={setwindowsState}  />
+        <Nav setWindowsState={setwindowsState} />
         <div className="floatingLine">
           <FloatingLines
             enabledWaves={["top", "middle", "bottom"]}
@@ -34,7 +35,6 @@ function App() {
             parallax={true}
           />
         </div>
-
         <Dock windowsState={windowsState} setWindowsState={setwindowsState} />
         {windowsState.github && (
           <Github
@@ -64,6 +64,17 @@ function App() {
             setWindowsState={setwindowsState}
           />
         )}
+
+
+        {
+          windowsState.linkdin && (
+            <Linkdin
+              windowName="linkdin"
+              windowsState={windowsState}
+              setWindowsState={setwindowsState}
+            />
+          )
+        }
         {windowsState.cli && (
           <Cli
             windowName="cli"
@@ -71,13 +82,7 @@ function App() {
             setWindowsState={setwindowsState}
           />
         )}
-        {windowsState.repo && (
-          <RepoModels
-            windowName="repo"
-            windowsState={windowsState}
-            setWindowsState={setwindowsState}
-          />
-        )}
+  
       </main>
     </div>
   );

@@ -1,0 +1,56 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(229, 229, 229, 0.962);
+    border-radius: 0.5rem;
+    .navbar {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 1rem;
+        .navLeft,
+        .navRight {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+ .navLeft .navLogo{
+   width: 1.5rem;
+    height: 1.5rem;
+    img{
+        width: 100%;
+        height: 100%; 
+    }
+}
+
+        .navRight .icons {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 1.2rem;
+                    color: rgb(83, 87, 87);
+                }
+                h1 {
+                    font-size: 0.7rem;
+                    font-weight: 300;
+                    color: rgb(106, 107, 107);
+                }
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

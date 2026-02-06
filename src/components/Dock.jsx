@@ -1,6 +1,7 @@
 import React from "react";
 import "./dock.scss";
 
+
 function Dock({ windowsState, setWindowsState }) {
   return (
     <footer className="doc">
@@ -11,7 +12,9 @@ function Dock({ windowsState, setWindowsState }) {
         className="icon github"
       >
         <img src="/doc-icons/github.svg" alt="" />
-        <div className={`active-dot ${windowsState.github ? 'active' : '' }`}></div>
+        <div
+          className={`active-dot ${windowsState.github ? "active" : ""}`}
+        ></div>
       </div>
       <div
         onClick={() => {
@@ -20,7 +23,9 @@ function Dock({ windowsState, setWindowsState }) {
         className="icon note"
       >
         <img src="/doc-icons/note.svg" alt="" />
-        <div className={`active-dot ${windowsState.note ? 'active' : ''}`}></div>
+        <div
+          className={`active-dot ${windowsState.note ? "active" : ""}`}
+        ></div>
       </div>
       <div
         onClick={() => {
@@ -29,7 +34,9 @@ function Dock({ windowsState, setWindowsState }) {
         className="icon pdf"
       >
         <img src="/doc-icons/pdf.svg" alt="" />
-        <div className={`active-dot ${windowsState.resume ? 'active' : ''}`}></div>
+        <div
+          className={`active-dot ${windowsState.resume ? "active" : ""}`}
+        ></div>
       </div>
       <div className="icon calender">
         <img src="/doc-icons/calender.svg" alt="" />
@@ -42,16 +49,29 @@ function Dock({ windowsState, setWindowsState }) {
         className="icon spotify"
       >
         <img src="/doc-icons/spotify.svg" alt="" />
-        <div className={`active-dot ${windowsState.spotify ? 'active' : ''}`}></div>
+        <div
+          className={`active-dot ${windowsState.spotify ? "active" : ""}`}
+        ></div>
       </div>
       <div className="icon mail">
         <img src="/doc-icons/mail.svg" alt="" />
         <div className="active-dot"></div>
       </div>
-      <div className="icon link">
+
+
+
+      <div
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, linkdin: true }));
+        }}
+        className="icon link"
+      >
         <img src="/doc-icons/link.svg" alt="" />
-        <div className="active-dot"></div>
+        <div
+          className={`active-dot ${windowsState.linkdin ? "active" : ""}`}
+        ></div>
       </div>
+
       <div
         onClick={() => {
           setWindowsState((state) => ({ ...state, cli: true }));
@@ -59,7 +79,7 @@ function Dock({ windowsState, setWindowsState }) {
         className="icon cli"
       >
         <img src="/doc-icons/cli.svg" alt="" />
-        <div className={`active-dot ${windowsState.cli ? 'active' : ''}`}></div>
+        <div className={`active-dot ${windowsState.cli ? "active" : ""}`}></div>
       </div>
     </footer>
   );

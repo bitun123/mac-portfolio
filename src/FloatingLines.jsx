@@ -11,7 +11,7 @@ import {
   Clock
 } from 'three';
 
-import './FloatingLines.css';
+import './FloatingLines.scss';
 
 const vertexShader = `
 precision highp float;

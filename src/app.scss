@@ -32,13 +32,13 @@ main {
         sans-serif;
     position: "relative";
     z-index: 1;
-    .floatingLine{
-         position: "fixed";
-            top: 0;
-            left: 0;
-            width: "100%";
-            height: "100%";
-            z-index: 0;
+    .floatingLine {
+        position: "fixed";
+        top: 0;
+        left: 0;
+        width: "100%";
+        height: "100%";
+        z-index: 0;
     }
 }
 .hero {
@@ -49,4 +49,17 @@ main {
 body {
     background-color: black;
     overflow: hidden;
+}
+.app {
+    position: absolute;
+    z-index: 99;
+    height: 1px;
+    background-color: #fff;
+    h1 {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
