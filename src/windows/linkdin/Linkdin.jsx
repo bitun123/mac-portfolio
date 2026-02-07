@@ -8,7 +8,7 @@ function Linkdin({ windowName, windowsState, setWindowsState }) {
       windowName={windowName}
       windowsState={windowsState}
       setWindowsState={setWindowsState}
-         width="50vw"
+      width="50vw"
     >
       <div className="home">
         <div className="navbar">
@@ -49,8 +49,103 @@ function Linkdin({ windowName, windowsState, setWindowsState }) {
             </div>
           </div>
         </div>
+        <div className="page1">
+          <div className="backgroundPic">
+            <img src="/image/image8.png" alt="" />
+            <button>
+              <i className="ri-pencil-line"></i>
+            </button>
+          </div>
+          <div className="profile">
+            <img src="/image/image7.png" alt="" />
+          </div>
+          <div className="backgroundContent">
+            <button className="pencil">
+              <i className="ri-pencil-line"></i>
+            </button>
 
-        
+            <h1>
+              satyajit Das Mahapatra <i className="ri-shield-check-line"></i>{" "}
+              <span>He/Him</span>
+            </h1>
+            <p>
+              FRONTEND DEVELOPER || REACT JS | JAVASCRIPT | TAILWIND CSS |{" "}
+              <br /> SCSS | CSS | HTML | GSAP | REDUX
+            </p>
+            <p className="secondPara">
+              Contai-I, West Bengal, India <span>· Contact info</span>
+              <br />
+              <span>251 connections</span>
+            </p>
+            <div className="buttons">
+              <button className="btn firstBtn">Open to</button>
+              <button className="btn secondBtn">Add Section</button>
+              <button className="btn thirdBtn">Enhance profile</button>
+              <button className="btn fourthBtn">
+                <i className="ri-more-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="page2">
+          <div className="topcontent">
+            <h1>Analytics</h1>
+            <h2>
+              {" "}
+              <i className="ri-eye-line"></i>
+              <span>Private to you</span>
+            </h2>
+          </div>
+          <div className="buttonContent">
+            <div className="analyticCont">
+              <div className="analyticlogo">
+                <i class="ri-group-3-fill"></i>
+              </div>
+              <div className="content">
+                <h1>88 profile views</h1>
+                <p>Discover who's viewed your profile</p>
+              </div>
+            </div>
+
+            <div className="analyticCont">
+              <div className="analyticlogo">
+                <i className="ri-bar-chart-fill"></i>
+              </div>
+              <div className="content">
+                <h1>330 connections</h1>
+                <p>Discover who's connected with you</p>
+              </div>
+            </div>
+
+            <div className="analyticCont">
+              <div className="analyticlogo">
+                <i className="ri-search-line"></i>
+              </div>
+              <div className="content">
+                <h1> 2 Search activity</h1>
+                <p>Discover what you've searched for</p>
+              </div>
+            </div>
+          </div>
+          <div className="showSkill">
+            <h1>
+              Show all <i className="ri-arrow-right-line"></i>
+            </h1>
+          </div>
+        </div>
+        <div className="page3">
+          <i className="ri-pencil-line"></i>
+          <div className="page3content">
+            <h1>About</h1>
+            <p>
+              I am hard working have positive attitude keen to learn new things,
+              and enjoy working in a team environment . Among my other strengths
+              are comprehensive problem solving abilities , excellent verbal and
+              written communication skills, ability to deal with people
+              diplomatically , willingness to learn and team facilitator.
+            </p>
+          </div>
+        </div>
       </div>
     </MacWindow>
   );
