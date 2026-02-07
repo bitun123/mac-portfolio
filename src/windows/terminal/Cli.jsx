@@ -56,7 +56,7 @@ Frontend:
 
 Backend:
   • Node.js, Express.js
-  • MongoDB, MySQL
+  • MongoDB
   • REST APIs, 
 
 Tools:
@@ -71,17 +71,17 @@ Tools:
         return `
 Featured Projects
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. E-commerce Platform
-   Tech: MERN Stack | Deploy: Vercel
-   Features: Payment integration, inventory management
+1. CRYPTOGRAPHY
+   Tech: REACT | Real-time updates | Deploy: Vercel
+   Features: Real-time cryptocurrency data with pagination & caching
 
-2. Social Media Dashboard
-   Tech: React + Firebase | Real-time updates
-   Features: User authentication, post creation
+2. ASTRATTO-WEBSITE
+   Tech: React | Real-time updates
+   Features: Smooth, high-performance animations & transitions
 
-3. Task Management App
-   Tech: React + MongoDB | Cloud-based
-   Features: Collaboration, notifications
+3. FIGMA-EDITOR
+   Tech: JS| Deploy: Vercel
+   Features: CREATE RECTANGLES, CIRCLES, LINES, TEXT, IMAGES, DRAG & DROP, RESIZE, ROTATE
 
 Type 'github' to explore my repositories!`;
       },
@@ -93,8 +93,8 @@ Type 'github' to explore my repositories!`;
         return `
 Contact Information
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Email: satyajit@example.com
-Phone: +91 (Your number)
+Email: satyajitdasmahapatra2002@gmail.com
+Phone: +91 9339203351
 Location: India
 
 Type 'social' to see my social media links`;
@@ -168,7 +168,11 @@ Happy exploring! 🚀
 `;
 
   return (
-    <MacWindow windowName={windowName} windowsState={windowsState} setWindowsState={setWindowsState} >
+    <MacWindow
+      windowName={windowName}
+      windowsState={windowsState}
+      setWindowsState={setWindowsState}
+    >
       <div className="cli-window">
         <Terminal
           commands={commands}

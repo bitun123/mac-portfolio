@@ -10,6 +10,7 @@ import Spotify from "./windows/spotify/Spotify";
 import Cli from "./windows/terminal/Cli";
 import FloatingLines from "./FloatingLines";
 import Linkdin from "./windows/linkdin/Linkdin";
+import Skills from "./windows/skills/Skills";
 
 function App() {
   const [windowsState, setwindowsState] = useState({
@@ -18,6 +19,8 @@ function App() {
     resume: false,
     spotify: false,
     cli: false,
+    linkdin: false,
+    skills: false,
   });
   return (
     <div className="hero">
@@ -57,6 +60,13 @@ function App() {
             setWindowsState={setwindowsState}
           />
         )}
+        {windowsState.skills && (
+          <Skills
+            windowName="skills"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
         {windowsState.spotify && (
           <Spotify
             windowName="spotify"
@@ -64,17 +74,13 @@ function App() {
             setWindowsState={setwindowsState}
           />
         )}
-
-
-        {
-          windowsState.linkdin && (
-            <Linkdin
-              windowName="linkdin"
-              windowsState={windowsState}
-              setWindowsState={setwindowsState}
-            />
-          )
-        }
+        {windowsState.linkdin && (
+          <Linkdin
+            windowName="linkdin"
+            windowsState={windowsState}
+            setWindowsState={setwindowsState}
+          />
+        )}
         {windowsState.cli && (
           <Cli
             windowName="cli"
@@ -82,7 +88,6 @@ function App() {
             setWindowsState={setwindowsState}
           />
         )}
-  
       </main>
     </div>
   );

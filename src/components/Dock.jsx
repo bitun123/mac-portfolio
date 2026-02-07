@@ -1,7 +1,6 @@
 import React from "react";
 import "./dock.scss";
 
-
 function Dock({ windowsState, setWindowsState }) {
   return (
     <footer className="doc">
@@ -38,9 +37,14 @@ function Dock({ windowsState, setWindowsState }) {
           className={`active-dot ${windowsState.resume ? "active" : ""}`}
         ></div>
       </div>
-      <div className="icon calender">
-        <img src="/doc-icons/calender.svg" alt="" />
-        <div className="active-dot"></div>
+      <div
+        className="icon skills"
+        onClick={() => {
+          setWindowsState((state) => ({ ...state, skills: true }));
+        }}
+      >
+        <img src="/doc-icons/skills.svg" alt="" />
+        <div className={`active-dot ${windowsState.skills ? "active" : ""}`}></div>
       </div>
       <div
         onClick={() => {
@@ -53,12 +57,13 @@ function Dock({ windowsState, setWindowsState }) {
           className={`active-dot ${windowsState.spotify ? "active" : ""}`}
         ></div>
       </div>
-      <div className="icon mail">
+      <div className="icon mail" 
+      
+      onClick={()=>{window.open("mailto:satyajitdasmahapatra2002@gmail.com","_blank")}}
+      >
         <img src="/doc-icons/mail.svg" alt="" />
         <div className="active-dot"></div>
       </div>
-
-
 
       <div
         onClick={() => {
